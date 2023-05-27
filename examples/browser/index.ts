@@ -41,3 +41,10 @@ eye.fetchGet(request.endpoint, "PATCH", 401, request.time)
 
 eye.fetchSend(request.endpoint, "DELETE")
 eye.fetchGet(request.endpoint, "DELETE", 500, request.time)
+
+eye.newLogGroup("Do something", {name: "first phase"})
+eye.newStep("Do something", {name: "second phase"})
+eye.stepReady("Do something", "second phase")
+eye.stepReady("Do something", "first phase")
+eye.newStep("Do something", {name: "third phase"})
+eye.stepReady("Do something", "third phase", true)

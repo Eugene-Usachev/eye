@@ -76,3 +76,21 @@
   will show
 
   ![Example Image](example_images/example3.png)
+
+  Use LogGroup to create log groups. You can add a new step to a group using the newStep function, which takes 2 arguments: the name of the log group and an element of type {name: string}. You can complete a step using the stepReady function, which takes 3 arguments: the name of the log group, the name of the step, and a boolean value that completes the log group (default is false). Once each step and group is finished, you will see the execution time.
+  
+  For example code
+  ```typescript
+  const eye = new Eye();
+
+  eye.newLogGroup("Do something", {name: "first phase"})
+  eye.newStep("Do something", {name: "second phase"})
+  eye.stepReady("Do something", "second phase")
+  eye.stepReady("Do something", "first phase")
+  eye.newStep("Do something", {name: "third phase"})
+  eye.stepReady("Do something", "third phase", true)
+  ```
+
+  will show
+  
+  ![Example Image](example_images/example4.png)
