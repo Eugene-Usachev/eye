@@ -42,6 +42,7 @@
   eye.logReady({...obj, with: "logReady"})
   ```
   will show
+
   ![Example Image](example_images/example2.png)
 
   The coolest things are the "fetchSend()" and "fetchGet()" functions. Use them to log the request to the server. 
@@ -73,4 +74,5 @@
   eye.fetchGet(request.endpoint, "DELETE", 500, request.time)
   ```
   will show
+
   ![Example Image](example_images/example3.png)
