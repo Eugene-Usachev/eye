@@ -1,0 +1,6 @@
+{
+  "name": "@eugene-usachev/log-eye",
+  "version": "1.0.0",
+  "description": "Open source log library for TypeScript",
+  "private": false
+}
